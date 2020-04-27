@@ -1,7 +1,7 @@
 <nav>
-    <ul>
-        <li>home</li>
-        <li>homes</li>
-        <li>homes</li>
-    </ul>
+  <ul>
+    {{~ nm.nav :link}}
+    <li><a href="{{= link.slug}}">{{= link.title}}</a></li>
+    {{~}}
+  </ul>
 </nav>

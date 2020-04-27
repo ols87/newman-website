@@ -1,3 +1,6 @@
+const nav = require('../templates/includes/nav/nav');
+
 module.exports = {
-template: 'page'
-}
+  template: 'page',
+  nav: nav,
+};
