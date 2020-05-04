@@ -8,21 +8,13 @@
     <title></title>
 
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
-    {{? nm.templateStyles }}
-    <link rel="stylesheet" type="text/css" href="{{= nm.templateStyles}}" />
-    {{?}} {{? nm.hasStyles }}
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    {{?}}
+    {{= xt.templateStyles }} {{= xt.pageStyles }}
   </head>
 
   <body>
-    Staxt Static Site Generator {{#def.staxt.include('nav/nav')}}
+    staxt static-ish site generator
   </body>
 
   <script src="/assets/js/main.js"></script>
-  {{? nm.templateScripts }}
-  <script src="{{= xt.templateScripts}}"></script>
-  {{?}} {{? nm.hasScripts }}
-  <script src="scripts.js"></script>
-  {{?}}
+  {{= xt.templateScripts }} {{= xt.pageScripts }}
 </html>
