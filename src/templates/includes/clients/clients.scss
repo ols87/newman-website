@@ -8,14 +8,21 @@
   }
 }
 
-.client-logo-bg {
+.client-logos {
   @apply bg-gray-200;
 }
 
-.client-logos {
+.client-logos .container{
   @apply flex flex-wrap;
 }
 
 .client-logo {
-  @apply w-1/5;
+   @apply w-1/5;
+   height: 10vw;
+
+  img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
 }

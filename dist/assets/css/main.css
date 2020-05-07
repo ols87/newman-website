@@ -761,19 +761,54 @@ video {
   font-family: "DM Serif Display", sans-serif;
 }
 
-.client-logo-bg {
+.client-logos {
   --bg-opacity: 1;
   background-color: #edf2f7;
   background-color: rgba(237, 242, 247, var(--bg-opacity));
 }
 
-.client-logos {
+.client-logos .container {
   display: flex;
   flex-wrap: wrap;
 }
 
 .client-logo {
   width: 20%;
+  height: 10vw;
+}
+
+.client-logo img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+}
+
+.footer-logo {
+  width: 40%;
+}
+
+.footer-logo img {
+  height: 14rem;
+  width: 14rem;
+}
+
+.footer-content {
+  width: 60%;
+  font-style: italic;
+  padding-left: 1.25rem;
+  font-family: "DM Serif Display", sans-serif;
+}
+
+.footer-content h4 {
+  font-size: 1.5rem;
+  color: #292A33;
 }
 
 body {
