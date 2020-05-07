@@ -8,13 +8,14 @@
     <title></title>
 
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
-    {{= xt.templateStyles }} {{= xt.pageStyles }}
+
+    {{= nm.templateStyles }} {{= nm.pageStyles }}
   </head>
 
   <body>
-    staxt static-ish site generator
+    {{#def.include('nav')}} {{#def.include('content')}} {{#def.include('services')}} {{#def.include('clients')}}
   </body>
 
   <script src="/assets/js/main.js"></script>
-  {{= xt.templateScripts }} {{= xt.pageScripts }}
+  {{= nm.templateScripts }} {{= nm.pageScripts }}
 </html>

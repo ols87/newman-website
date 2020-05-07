@@ -1,0 +1,36 @@
+.content {
+  @apply flex items-center;
+}
+
+.home-content {
+  @apply mt-10 border-b border-gray-300 pb-32 pt-8;
+}
+
+.content-left {
+  @apply w-2/5;
+
+  img {
+    min-height: 400px;
+    width: 270px;
+  }
+}
+
+.content-right {
+  @apply w-3/5 pl-5 pr-24;
+
+  h3 {
+    @apply text-3xl leading-10 mb-3;
+    font-family: 'DM Serif Display', sans-serif;
+    color: #292a33;
+  }
+
+  p {
+    @apply mb-4;
+    color: #313239;
+  }
+}
+
+.btn {
+  @apply font-semibold border-b-2 border-gray-500 leading-none inline-block;
+  color: #292a33;
+}

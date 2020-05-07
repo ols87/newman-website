@@ -1,6 +1,32 @@
 .site-nav {
-  a {
-    color: blue;
-    text-decoration: none;
+  &.container {
+    @apply mt-10 border-b border-gray-300;
+  }
+}
+
+.site-nav ul {
+  @apply flex justify-center;
+}
+
+.site-nav ul li a {
+  @apply inline-block px-6 pb-3;
+  color: #292a33;
+}
+
+.site-header {
+  @apply text-center pb-12;
+  font-family: 'DM Serif Display', sans-serif;
+
+  &.container {
+    @apply border-b border-gray-300;
+  }
+
+  h1 {
+    font-size: 72px;
+    color: #292a33;
+  }
+
+  p {
+    @apply italic -m-4;
   }
 }

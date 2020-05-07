@@ -1,0 +1,21 @@
+.clients {
+  @apply mt-20;
+
+  h2 {
+    @apply text-5xl leading-none mb-8;
+    color: #292a33;
+    font-family: 'DM Serif Display', sans-serif;
+  }
+}
+
+.client-logo-bg {
+  @apply bg-gray-200;
+}
+
+.client-logos {
+  @apply flex;
+}
+
+.clients-logo {
+  @apply w-1/5 h-40;
+}

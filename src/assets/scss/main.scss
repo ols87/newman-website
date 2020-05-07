@@ -1,5 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&display=swap');
+
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
+
 @import '../../templates/includes/nav/nav';
 
+@import '../../templates/includes/content/content.scss';
+
+@import '../../templates/includes/services/services.scss';
+
+@import '../../templates//includes/clients/clients.scss';
+
 body {
-  font-family: sans-serif;
+  font-family: 'Hind Vadodara', sans-serif;
+}
+
+.container {
+  @apply m-auto px-32;
 }
