@@ -13,9 +13,9 @@
 }
 
 .client-logos {
-  @apply flex;
+  @apply flex flex-wrap;
 }
 
-.clients-logo {
-  @apply w-1/5 h-40;
+.client-logo {
+  @apply w-1/5;
 }

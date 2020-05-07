@@ -769,11 +769,11 @@ video {
 
 .client-logos {
   display: flex;
+  flex-wrap: wrap;
 }
 
-.clients-logo {
+.client-logo {
   width: 20%;
-  height: 10rem;
 }
 
 body {
