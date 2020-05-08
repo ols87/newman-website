@@ -1,22 +1,48 @@
 .content {
-  @apply flex items-center;
+  @apply flex flex-col items-center;
+
+  @screen sm {
+    @apply flex-row;
+  }
 }
 
 .home-content {
-  @apply mt-10 border-b border-gray-300 pb-32 pt-8;
+  @apply mt-10 border-b border-gray-300 pb-20 pt-8;
+
+  @screen md {
+    @apply pb-24;
+  }
+
+  @screen lg {
+    @apply pb-32;
+  }
 }
 
 .content-left {
-  @apply w-2/5;
+  @apply w-full;
+
+  @screen sm {
+    @apply w-2/5;
+  }
 
   img {
+    @apply mx-auto;
+
     min-height: 400px;
     width: 270px;
   }
 }
 
 .content-right {
-  @apply w-3/5 pl-5 pr-24;
+  @apply w-full mt-8;
+
+  @screen sm {
+    @apply w-3/5 pl-5 pr-24 mt-0;
+  }
+
+  @screen md {
+    @apply pr-0;
+  }
 
   h3 {
     @apply text-3xl leading-10 mb-3;

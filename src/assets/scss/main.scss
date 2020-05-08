@@ -22,5 +22,9 @@ body {
 }
 
 .container {
-  @apply m-auto px-32;
+  @apply m-auto px-8;
+
+  @screen lg {
+    @apply px-32;
+  }
 }

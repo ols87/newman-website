@@ -1,21 +1,37 @@
-.footer{
-  @apply flex items-center pt-16 pb-24;
-}
+.footer {
+  @apply flex flex-col items-center pt-12 pb-20;
 
-.footer-logo{
-  @apply w-2/5;
+  @screen sm {
+    @apply flex-row pt-16 pb-24;
+  }
 
-  img{
-    @apply h-56 w-56;
+  @screen md {
+    @apply pt-12 pb-20;
   }
 }
 
-.footer-content{
-  @apply w-3/5 italic pl-5;
+.footer-logo {
+  @apply w-full;
+
+  @screen sm {
+    @apply w-2/5;
+  }
+
+  img {
+    @apply h-56 w-56 mx-auto;
+  }
+}
+
+.footer-content {
+  @apply w-full italic mt-4;
   font-family: 'DM Serif Display', sans-serif;
 
-  h4{
+  @screen sm {
+    @apply w-3/5 pl-5 mt-0;
+  }
+
+  h4 {
     @apply text-2xl;
-    color: #292A33;
+    color: #292a33;
   }
 }

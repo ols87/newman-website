@@ -6,6 +6,21 @@
   </ul>
 </nav>
 
+<nav class="site-nav mb-nav">
+  <div class="mb-nav-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <ul>
+    <li>
+      {{~ nm.nav :link}}
+      <li><a href="{{= link.slug}}">{{= link.title}}</a></li>
+      {{~}}
+    </li>
+  </ul>
+</nav>
+
 <header class="site-header container">
   <h1>Laurence Newman</h1>
   <p>Writer | Communications Consultant | Editor</p>

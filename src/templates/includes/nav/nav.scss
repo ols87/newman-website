@@ -1,6 +1,12 @@
 .site-nav {
+  @apply sticky top-0 bg-white pt-4 hidden;
+
+  @screen md {
+    @apply block;
+  }
+
   &.container {
-    @apply mt-10 border-b border-gray-300;
+    @apply mt-4 border-b border-gray-300;
   }
 }
 
@@ -9,12 +15,41 @@
 }
 
 .site-nav ul li a {
-  @apply inline-block px-6 pb-3;
+  @apply inline-block px-6 pb-3 whitespace-no-wrap;
   color: #292a33;
+
+  @screen md {
+    @apply px-4;
+  }
+}
+
+// Mobile nav
+.mb-nav {
+  @apply block border-b border-gray-300;
+  padding: 10px 0;
+
+  @screen md {
+    @apply hidden;
+  }
+
+  .mb-nav-icon {
+    @apply w-8 mx-auto;
+
+    span {
+      @apply block w-full bg-gray-900;
+      height: 2px;
+      margin: 5px 0;
+    }
+  }
+
+  ul {
+    @apply flex-col hidden absolute min-h-screen bg-white justify-start border-r border-gray-300;
+    top: 47px;
+  }
 }
 
 .site-header {
-  @apply text-center pb-12;
+  @apply text-center pt-5 pb-8;
   font-family: 'DM Serif Display', sans-serif;
 
   &.container {
@@ -22,11 +57,24 @@
   }
 
   h1 {
-    font-size: 72px;
+    @apply leading-none text-4xl;
     color: #292a33;
+
+    @screen sm {
+      @apply text-5xl;
+    }
+
+    @screen md {
+      @apply text-6xl;
+    }
+
+    @screen lg {
+      font-size: 72px;
+    }
   }
 
   p {
-    @apply italic -m-4;
+    @apply tracking-wider italic;
+    color: #313239;
   }
 }
