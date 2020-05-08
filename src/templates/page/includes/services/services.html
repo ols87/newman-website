@@ -1,0 +1,12 @@
+<section class="services container">
+  <h2>{{#def.services.title}}</h2>
+  <div class="service-items">
+    {{~{{#def.stringify(def.services.services)}} :item}}
+    <div class="service-item">
+      <h3>{{=item.name}}</h3>
+      <p>{{=item.content}}.</p>
+      <a href="{{=item.link}}" class="btn">LEARN MORE</a>
+    </div>
+    {{~}}
+  </div>
+</section>

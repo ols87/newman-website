@@ -1,7 +1,7 @@
 <nav class="site-nav container">
   <ul>
-    {{~ nm.nav :link}}
-    <li><a href="{{= link.slug}}">{{= link.title}}</a></li>
+    {{~{{#def.stringify(def.nav.nav)}} :link}}
+     <li><a href="{{= link.slug}}">{{= link.title}}</a></li>
     {{~}}
   </ul>
 </nav>
@@ -14,8 +14,8 @@
   </div>
   <ul>
     <li>
-      {{~ nm.nav :link}}
-      <li><a href="{{= link.slug}}">{{= link.title}}</a></li>
+      {{~{{#def.stringify(def.nav.nav)}} :link}}
+        <li><a href="{{= link.slug}}">{{= link.title}}</a></li>
       {{~}}
     </li>
   </ul>

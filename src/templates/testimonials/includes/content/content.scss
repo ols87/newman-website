@@ -1,0 +1,20 @@
+.testimonial-content {
+  @apply my-8;
+
+  &.content {
+    @apply items-start;
+  }
+
+  .content-left {
+    @screen sm {
+      @apply sticky;
+      top: 36%;
+    }
+  }
+
+  .content-right {
+    h5 {
+      @apply mt-4 mb-12;
+    }
+  }
+}

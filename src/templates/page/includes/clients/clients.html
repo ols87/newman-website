@@ -1,0 +1,12 @@
+<section class="clients">
+  <h2 class="container">{{#def.clients.title}}</h2>
+  <div class="client-logos">
+    <div class="container">
+      {{~{{#def.stringify(def.clients.clients)}} :link}}
+      <div class="client-logo">
+        <img src="{{= link.src}}" />
+      </div>
+      {{~}}
+    </div>
+  </div>
+</section>

@@ -9,13 +9,17 @@
 
 @import '../../templates/includes/nav/nav';
 
-@import '../../templates/includes/content/content.scss';
+@import '../../templates/page/includes/content/content.scss';
 
-@import '../../templates/includes/services/services.scss';
-
-@import '../../templates/includes/clients/clients.scss';
+@import '../../templates/page/page.scss';
 
 @import '../../templates/includes/footer/footer.scss';
+
+@import '../../templates/about/about.scss';
+
+@import '../../templates/copywriting/copywriting.scss';
+
+@import '../../templates/testimonials/testimonials.scss';
 
 body {
   font-family: 'Hind Vadodara', sans-serif;

@@ -1,0 +1,21 @@
+.copy-content {
+  @apply my-8 items-start;
+
+  .content-left {
+    @screen sm {
+      @apply sticky;
+      top: 36%;
+    }
+  }
+}
+
+.content-left {
+  font-family: 'DM Serif Display', sans-serif;
+  h3 {
+    @apply text-4xl mb-4;
+  }
+
+  p {
+    @apply text-lg italic;
+  }
+}

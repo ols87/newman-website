@@ -1,0 +1,98 @@
+.content {
+  @apply flex flex-col items-center my-8;
+
+  @screen sm {
+    @apply flex-row;
+  }
+}
+
+.home-content {
+  @apply mt-10 border-b border-gray-300 pb-20 pt-8;
+
+  @screen md {
+    @apply pb-24;
+  }
+
+  @screen lg {
+    @apply pb-32;
+  }
+}
+
+.content-left {
+  @apply w-full;
+  font-family: 'DM Serif Display', sans-serif;
+
+  @screen sm {
+    @apply w-2/5;
+  }
+
+  h3 {
+    @apply text-4xl mb-12;
+  }
+
+  p {
+    @apply text-lg italic;
+  }
+
+  img {
+    @apply mx-auto;
+
+    min-height: 400px;
+    width: 270px;
+  }
+}
+
+.home-content .content-right {
+  @screen lg {
+    @apply mr-32;
+  }
+}
+
+.content-right {
+  @apply w-full mt-8;
+  font-family: 'DM Serif Display', sans-serif;
+
+  @screen sm {
+    @apply w-3/5 pl-5 mt-0;
+  }
+
+  h3 {
+    @apply text-3xl leading-10 mb-3;
+    color: #292a33;
+  }
+
+  span {
+    @apply block leading-none -mb-12;
+    font-size: 100px;
+    color: #292a33;
+  }
+
+  h5 {
+    @apply text-xl font-bold mt-8 mb-4;
+    font-family: 'Hind Vadodara', sans-serif;
+  }
+
+  h6 {
+    @apply text-xl italic mb-4;
+  }
+
+  p {
+    @apply mb-4;
+    color: #313239;
+    font-family: 'Hind Vadodara', sans-serif;
+  }
+
+  img {
+    @apply my-4 w-full;
+
+    @srceen sm {
+      @apply max-w-full;
+    }
+  }
+}
+
+.btn {
+  @apply font-semibold border-b-2 border-gray-500 leading-none inline-block;
+  color: #292a33;
+  font-family: 'Hind Vadodara', sans-serif;
+}

@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "staxt": "^2.0.0-rc.14"
+    "staxt": "^2.0.0-rc.19"
   }
 }

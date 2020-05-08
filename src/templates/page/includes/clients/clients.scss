@@ -26,7 +26,11 @@
 
 .client-logo {
   @apply w-1/5;
-  height: 10vw;
+  height: 20vw;
+
+  @screen sm {
+    height: 10vw;
+  }
 
   img {
     object-fit: cover;
