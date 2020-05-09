@@ -1,3 +1,4 @@
 module.exports = {
-  template: 'content',
+  template: 'page',
+  slug: 'content-editing',
 };

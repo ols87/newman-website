@@ -1,0 +1,12 @@
+<section class="clients">
+  <h2 class="container">{{= nm.clients.title}}</h2>
+  <div class="client-logos">
+    <div class="container">
+      {{~ nm.clients.list :link}}
+      <div class="client-logo">
+        <img src="{{= link.src}}" />
+      </div>
+      {{~}}
+    </div>
+  </div>
+</section>

@@ -1,2 +1,27 @@
-@import './includes/services/services.scss';
-@import './includes/clients/clients.scss';
+.content {
+  @apply my-8 items-start;
+}
+
+.content-left {
+  @screen sm {
+    @apply sticky;
+    top: 36%;
+    width: 40%;
+  }
+
+  font-family: 'DM Serif Display', sans-serif;
+
+  h3 {
+    @apply text-4xl mb-4;
+  }
+
+  p {
+    @apply text-lg italic;
+  }
+}
+
+.content-right {
+  @screen sm {
+    padding-left: 40%;
+  }
+}

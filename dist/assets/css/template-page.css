@@ -1,129 +1,33 @@
-.services {
-  border-bottom-width: 1px;
-  padding-top: 3rem;
-  padding-bottom: 6rem;
-  --border-opacity: 1;
-  border-color: #e2e8f0;
-  border-color: rgba(226, 232, 240, var(--border-opacity));
-}
-
-@media (min-width: 640px) {
-  .services {
-    padding-top: 3rem;
-    padding-bottom: 6rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .services {
-    padding-top: 5rem;
-    padding-bottom: 8rem;
-  }
-}
-
-.services h2 {
-  font-size: 3rem;
-  line-height: 1;
-  margin-bottom: 0;
-  color: #292a33;
-  font-family: "DM Serif Display", sans-serif;
-}
-
-@media (min-width: 640px) {
-  .services h2 {
-    margin-bottom: 1rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .services h2 {
-    margin-bottom: 2rem;
-  }
-}
-
-.service-items {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.service-item {
-  width: 100%;
+.content {
   margin-top: 2rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
 }
 
-@media (min-width: 640px) {
-  .service-item {
-    width: 33.333333%;
-    padding-right: 4rem;
-    margin-top: 0;
-  }
-}
-
-@media (min-width: 640px) {
-  .service-item {
-    padding-right: 1rem;
-  }
-}
-
-.service-item h3 {
-  font-size: 1.875rem;
-  color: #292a33;
+.content-left {
   font-family: "DM Serif Display", sans-serif;
 }
 
-.service-item p {
-  margin-top: 0.75rem;
+@media (min-width: 640px) {
+  .content-left {
+    position: sticky;
+    top: 36%;
+    width: 40%;
+  }
+}
+
+.content-left h3 {
+  font-size: 2.25rem;
   margin-bottom: 1rem;
 }
 
-.clients {
-  margin-top: 3rem;
-}
-
-@media (min-width: 1024px) {
-  .clients {
-    margin-top: 5rem;
-  }
-}
-
-.clients h2 {
-  font-size: 3rem;
-  line-height: 1;
-  margin-bottom: 2rem;
-  color: #292a33;
-  font-family: "DM Serif Display", sans-serif;
-}
-
-@media (min-width: 1024px) {
-  .clients h2 {
-    margin-bottom: 3rem;
-  }
-}
-
-.client-logos {
-  --bg-opacity: 1;
-  background-color: #edf2f7;
-  background-color: rgba(237, 242, 247, var(--bg-opacity));
-}
-
-.client-logos .container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.client-logo {
-  width: 20%;
-  height: 20vw;
+.content-left p {
+  font-size: 1.125rem;
+  font-style: italic;
 }
 
 @media (min-width: 640px) {
-  .client-logo {
-    height: 10vw;
+  .content-right {
+    padding-left: 40%;
   }
-}
-
-.client-logo img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
 }

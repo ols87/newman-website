@@ -8,12 +8,34 @@
     <title></title>
 
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
-
     {{= nm.templateStyles }} {{= nm.pageStyles }}
   </head>
 
   <body>
-    {{#def.include('nav')}} {{#def.include('content')}}{{#def.include('services')}} {{#def.include('clients')}} {{#def.include('footer')}}
+    {{#def.include('nav')}}
+
+    <div class="content container">
+      <div class="content-left">
+        <h3>{{= nm.title}}</h3>
+        {{~ nm.content :content}}
+        <p>{{= content.title}}</p>
+        {{~}}
+      </div>
+
+      <div class="content-right">
+        <span>&ldquo;</span>
+        <h6>{{= nm.quote}}</h6>
+
+        {{~ nm.content :content}}
+        <h5>{{= content.description}}</h5>
+
+        {{~ content.images : image}}
+        <img src="{{= image}}" />
+        {{~}} {{~}}
+      </div>
+    </div>
+
+    {{#def.include('footer')}}
   </body>
 
   <script src="/assets/js/main.js"></script>
