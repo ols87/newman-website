@@ -4,10 +4,6 @@
   align-items: flex-start;
 }
 
-.content-left {
-  font-family: "DM Serif Display", sans-serif;
-}
-
 @media (min-width: 640px) {
   .content-left {
     position: sticky;

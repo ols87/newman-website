@@ -5,17 +5,37 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@import './variables';
+
 @import '../../templates/includes/nav/nav';
 @import '../../templates/includes/footer/footer';
 
 body {
-  font-family: 'Hind Vadodara', sans-serif;
+  @apply font-sans text-sm;
+  color: $color-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-serif;
 }
 
 .container {
-  @apply m-auto px-8;
+  @apply m-auto px-6;
 
   @screen lg {
     @apply px-32;
+  }
+}
+
+.content {
+  @apply flex flex-col items-center my-8;
+
+  @screen sm {
+    @apply flex-row;
   }
 }

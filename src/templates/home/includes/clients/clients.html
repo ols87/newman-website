@@ -2,9 +2,9 @@
   <h2 class="container">{{= nm.clients.title}}</h2>
   <div class="client-logos">
     <div class="container">
-      {{~ nm.clients.list :link}}
+      {{~ nm.clients.list :image}}
       <div class="client-logo">
-        <img src="{{= link.src}}" />
+        <img src="/assets/images/clients/{{= image}}.png" />
       </div>
       {{~}}
     </div>

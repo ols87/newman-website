@@ -7,8 +7,6 @@
 
   h2 {
     @apply text-5xl leading-none mb-8;
-    color: #292a33;
-    font-family: 'DM Serif Display', sans-serif;
 
     @screen lg {
       @apply mb-12;
@@ -25,16 +23,14 @@
 }
 
 .client-logo {
-  @apply w-1/5;
-  height: 20vw;
+  @apply w-1/2;
 
-  @screen sm {
-    height: 10vw;
+  @screen md {
+    @apply w-1/5;
   }
 
   img {
+    @apply w-full h-full;
     object-fit: cover;
-    width: 100%;
-    height: 100%;
   }
 }

@@ -16,7 +16,7 @@
 
 .site-nav ul li a {
   @apply inline-block px-6 pb-3 whitespace-no-wrap;
-  color: #292a33;
+  color: $color-body;
 
   @screen md {
     @apply px-4;
@@ -49,8 +49,7 @@
 }
 
 .site-header {
-  @apply text-center pt-5 pb-8;
-  font-family: 'DM Serif Display', sans-serif;
+  @apply font-serif text-center py-6;
 
   &.container {
     @apply border-b border-gray-300;
@@ -58,7 +57,6 @@
 
   h1 {
     @apply leading-none text-4xl;
-    color: #292a33;
 
     @screen sm {
       @apply text-5xl;
@@ -75,6 +73,5 @@
 
   p {
     @apply tracking-wider italic;
-    color: #313239;
   }
 }

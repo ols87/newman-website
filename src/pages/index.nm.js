@@ -1,6 +1,7 @@
 module.exports = {
   template: 'home',
   content: {
+    image: '/assets/images/laurence.png',
     title: 'Freelance Writer, Editor, & Communications Consultant',
     body:
       '<p>I am a freelance copywriter, editor, and communications consultant. Now based in Vietnam, I relocated from London in 2016 after almost a decade in media relations and public affairs roles.</p>',
@@ -29,17 +30,6 @@ module.exports = {
   },
   clients: {
     title: 'Clients',
-    list: [
-      { src: 'https://picsum.photos/id/237/200/300' },
-      { src: 'https://picsum.photos/id/27/200/300' },
-      { src: 'https://picsum.photos/id/287/200/300' },
-      { src: 'https://picsum.photos/id/37/200/300' },
-      { src: 'https://picsum.photos/id/297/200/300' },
-      { src: 'https://picsum.photos/id/272/200/300' },
-      { src: 'https://picsum.photos/id/27/200/300' },
-      { src: 'https://picsum.photos/id/8/200/300' },
-      { src: 'https://picsum.photos/id/17/200/300' },
-      { src: 'https://picsum.photos/id/47/200/300' },
-    ],
+    list: ['eurocham', 'oxfam', 'austrade', 'lin', 'wse', 'ap', 'cci', 'lion', 'starseed', 'shs'],
   },
 };
