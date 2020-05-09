@@ -13,13 +13,63 @@
     @apply text-4xl mb-4;
   }
 
-  p {
-    @apply text-lg italic;
+  a {
+    @apply font-serif text-lg italic block;
+
+    &:hover::before {
+      content: '';
+      width: 50px;
+      height: 1px;
+      display: inline-block;
+      background: black;
+      margin-left: -60px;
+      margin-right: 10px;
+      margin-bottom: 5px;
+    }
+  }
+
+  img {
+    width: 100px;
   }
 }
 
 .content-right {
+  @apply w-full;
+
   @screen sm {
-    padding-left: 40%;
+    @apply w-3/5 pl-8 pr-16;
+  }
+
+  h3 {
+    @apply text-3xl leading-10 mb-3;
+  }
+
+  span {
+    @apply font-serif block leading-none mt-8 -mb-12;
+    font-size: 100px;
+
+    @screen md {
+      @apply mt-0;
+    }
+  }
+
+  h5 {
+    @apply font-sans text-xl font-bold mt-8 mb-4;
+  }
+
+  h6 {
+    @apply font-serif text-xl italic mb-4;
+  }
+
+  p {
+    @apply mb-4 text-justify;
+  }
+
+  img {
+    @apply my-4 w-full;
+
+    @srceen sm {
+      @apply max-w-full;
+    }
   }
 }

@@ -13,25 +13,42 @@
 
   <body>
     {{#def.include('nav')}}
-
     <div class="content container">
       <div class="content-left">
         <h3>{{= nm.title}}</h3>
         {{~ nm.content :content}}
-        <p>{{= content.title}}</p>
+        {{? content.title}} <a href="#{{= content.title}}">{{= content.title}}</a>{{?}}
         {{~}}
+        <!--about me-->
+        {{? nm.avatar}}
+          <img src="{{= nm.avatar}}"/>
+        {{?}} 
       </div>
 
       <div class="content-right">
+        {{~ nm.quotes: quote}}
+        <span>&ldquo;</span>
+        <h6>{{= quote.content}}</h6>
+        <h5>{{= quote.author}}</h5>
+        </br>
+        <hr />
+        {{~}}
+        <!---->
+        {{?nm.quote}}
         <span>&ldquo;</span>
         <h6>{{= nm.quote}}</h6>
-
-        {{~ nm.content :content}}
-        <h5>{{= content.description}}</h5>
-
-        {{~ content.images : image}}
-        <img src="{{= image}}" />
-        {{~}} {{~}}
+        {{?}}
+        <!---->
+        {{~ nm.content :content}} 
+          <section id="{{=content.title}}">
+            <!---->
+            {{= content.description}}
+            <!---->
+            {{~ content.images : image}}
+            <img src="{{= image}}" />
+            {{~}}
+          </section>
+         {{~}}
       </div>
     </div>
 
