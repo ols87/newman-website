@@ -19,14 +19,18 @@
 }
 
 .client-logos .container {
-  @apply flex flex-wrap;
+  @apply flex flex-wrap py-6;
+
+  @screen md {
+    @apply py-0;
+  }
 }
 
 .client-logo {
-  @apply w-1/2;
+  @apply w-1/2 p-1;
 
   @screen md {
-    @apply w-1/5;
+    @apply w-1/5 p-0;
   }
 
   img {

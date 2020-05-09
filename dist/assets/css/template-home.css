@@ -47,8 +47,8 @@
 @media (min-width: 640px) {
   .content-right {
     width: 60%;
-    padding-left: 2.5rem;
-    padding-right: 5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     margin-top: 5rem;
   }
 }
@@ -96,6 +96,7 @@
 }
 
 .btn {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 600;
   border-bottom-width: 2px;
   --border-opacity: 1;
@@ -103,7 +104,6 @@
   border-color: rgba(160, 174, 192, var(--border-opacity));
   line-height: 1;
   display: inline-block;
-  font-family: "Hind Vadodara", sans-serif;
 }
 
 .services {
@@ -222,15 +222,26 @@
 .client-logos .container {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .client-logos .container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .client-logo {
   width: 50%;
+  padding: 0.25rem;
 }
 
 @media (min-width: 768px) {
   .client-logo {
     width: 20%;
+    padding: 0;
   }
 }
 

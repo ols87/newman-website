@@ -1,12 +1,8 @@
 .footer {
-  @apply flex flex-col items-center pt-12 pb-20;
+  @apply flex flex-col items-center py-16;
 
   @screen sm {
-    @apply flex-row pt-16 pb-24;
-  }
-
-  @screen md {
-    @apply pt-12 pb-20;
+    @apply flex-row;
   }
 }
 
@@ -27,10 +23,10 @@
 }
 
 .footer-content {
-  @apply font-serif w-full italic mt-4;
+  @apply font-serif text-center w-full italic mt-4;
 
   @screen sm {
-    @apply w-3/5 pl-5 mt-0;
+    @apply w-3/5 pl-5 mt-0 text-left;
   }
 
   h4 {
