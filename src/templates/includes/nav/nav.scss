@@ -33,13 +33,17 @@
   }
 
   .mb-nav-icon {
-    @apply w-8 mx-auto;
+    @apply w-8 mx-auto cursor-pointer;
 
     span {
       @apply block w-full bg-gray-900;
       height: 2px;
       margin: 5px 0;
     }
+  }
+
+  #toggle-nav:checked + ul {
+    @apply block pt-4;
   }
 
   ul {

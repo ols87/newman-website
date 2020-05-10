@@ -614,6 +614,10 @@ video {
 
 /*tailwind end components */
 
+.hidden{
+  display: none;
+}
+
 .site-nav {
   position: sticky;
   top: 0;
@@ -678,6 +682,7 @@ video {
   width: 2rem;
   margin-left: auto;
   margin-right: auto;
+  cursor: pointer;
 }
 
 .mb-nav .mb-nav-icon span {
@@ -688,6 +693,11 @@ video {
   background-color: rgba(26, 32, 44, var(--bg-opacity));
   height: 2px;
   margin: 5px 0;
+}
+
+.mb-nav #toggle-nav:checked + ul {
+  display: block;
+  padding-top: 1rem;
 }
 
 .mb-nav ul {
