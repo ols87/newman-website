@@ -7,7 +7,7 @@
 @media (min-width: 640px) {
   .content-left {
     position: sticky;
-    top: 36%;
+    top: 35%;
     width: 40%;
   }
 }
@@ -18,10 +18,11 @@
 }
 
 .content-left a {
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: DM Serif Display, serif;
   font-size: 1.125rem;
   font-style: italic;
   display: block;
+  line-height: 2rem;
 }
 
 .content-left a:hover::before {
@@ -36,7 +37,7 @@
 }
 
 .content-left img {
-  width: 100px;
+  width: 140px;
 }
 
 .content-right {
@@ -51,6 +52,10 @@
   }
 }
 
+.content-right section {
+  padding-top: 70px;
+}
+
 .content-right h3 {
   font-size: 1.875rem;
   line-height: 2.5rem;
@@ -58,12 +63,13 @@
 }
 
 .content-right span {
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: DM Serif Display, serif;
   display: block;
   line-height: 1;
+  margin-bottom: 0.5rem;
   margin-top: 2rem;
-  margin-bottom: -3rem;
   font-size: 100px;
+  height: 40px;
 }
 
 @media (min-width: 768px) {
@@ -72,19 +78,21 @@
   }
 }
 
+.content-right hr + span {
+  margin-top: 2rem;
+}
+
 .content-right h5 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Hind Vadodara, sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
-  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
 .content-right h6 {
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: DM Serif Display, serif;
   font-size: 1.25rem;
   font-style: italic;
-  margin-bottom: 1rem;
 }
 
 .content-right p {

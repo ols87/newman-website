@@ -5,7 +5,7 @@
 .content-left {
   @screen sm {
     @apply sticky;
-    top: 36%;
+    top: 35%;
     width: 40%;
   }
 
@@ -14,7 +14,7 @@
   }
 
   a {
-    @apply font-serif text-lg italic block;
+    @apply font-serif text-lg italic block leading-8;
 
     &:hover::before {
       content: '';
@@ -29,7 +29,7 @@
   }
 
   img {
-    width: 100px;
+    width: 140px;
   }
 }
 
@@ -40,25 +40,34 @@
     @apply w-3/5 pl-8 pr-16;
   }
 
+  section {
+    padding-top: 70px;
+  }
+
   h3 {
     @apply text-3xl leading-10 mb-3;
   }
 
   span {
-    @apply font-serif block leading-none mt-8 -mb-12;
+    @apply font-serif block leading-none mb-2 mt-8;
     font-size: 100px;
+    height: 40px;
 
     @screen md {
       @apply mt-0;
     }
   }
 
+  hr + span {
+    @apply mt-8;
+  }
+
   h5 {
-    @apply font-sans text-xl font-bold mt-8 mb-4;
+    @apply font-sans text-xl font-bold mb-4;
   }
 
   h6 {
-    @apply font-serif text-xl italic mb-4;
+    @apply font-serif text-xl italic;
   }
 
   p {

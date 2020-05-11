@@ -8,22 +8,22 @@ module.exports = {
     {
       title: 'Austrade',
       description: '<h5>The Australian Trade Commission</h5>',
-      images: ['https://picsum.photos/id/77/1000/600', 'https://picsum.photos/id/45/1000/600'],
+      images: ['/assets/images/copy/austrade-1.png', '/assets/images/copy/austrade-2.png'],
     },
     {
       title: 'Oxfam in Vietnam',
       description: '<h5>Oxfam in Vietnam</h5>',
-      images: ['https://picsum.photos/id/37/1000/600'],
+      images: ['/assets/images/copy/oxfam.png'],
     },
     {
       title: 'EuroCham',
       description: '<h5>The European Chamber of Commerce in Vietnam</h5>',
-      images: ['https://picsum.photos/id/77/1000/600', 'https://picsum.photos/id/45/1000/600'],
+      images: ['/assets/images/copy/eurocham-1.png', '/assets/images/copy/eurocham-1.png'],
     },
     {
       title: 'Audier & Partners Law Firm',
       description: '<h5>Audier & Partners Law Firm</h5>',
-      images: ['https://picsum.photos/id/45/1000/600'],
+      images: ['/assets/images/copy/ap.png'],
     },
   ],
 };

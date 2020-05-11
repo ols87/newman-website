@@ -8,12 +8,12 @@ module.exports = {
     {
       title: 'EuroCham',
       description: '<h5>The European Chamber of Commerce in Vietnam</h5>',
-      images: ['https://picsum.photos/id/57/200/300', 'https://picsum.photos/id/47/200/300', 'https://picsum.photos/id/46/200/300'],
+      images: ['/assets/images/content/eurocham-1.png', '/assets/images/content/eurocham-2.png', '/assets/images/content/eurocham-3.png'],
     },
     {
       title: 'Saigon-Hanoi Securities',
       description: '<h5>Saigon-Hanoi Securities</h5>',
-      images: ['https://picsum.photos/id/57/200/300', 'https://picsum.photos/id/97/200/300'],
+      images: ['/assets/images/content/shs-1.png', '/assets/images/content/shs-2.png'],
     },
   ],
 };

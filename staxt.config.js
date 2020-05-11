@@ -5,9 +5,11 @@ module.exports = {
     },
   },
   tailwind: {
-    fontFamily: {
-      sans: ['Hind Vadodara', 'sans-serif'],
-      serif: ['DM Serif Display', 'serif'],
+    theme: {
+      fontFamily: {
+        sans: ['Hind Vadodara', 'sans-serif'],
+        serif: ['DM Serif Display', 'serif'],
+      },
     },
   },
   defaultTemplate: 'page',
