@@ -111,3 +111,7 @@
     max-width: 100%;
   }
 }
+
+.content-right .author-quote {
+  margin-top: 2rem;
+}

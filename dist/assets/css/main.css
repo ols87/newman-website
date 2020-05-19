@@ -719,6 +719,10 @@ video {
   top: 47px;
 }
 
+.mb-nav ul li a {
+  display: block;
+}
+
 .site-header {
   font-family: DM Serif Display, serif;
   text-align: center;

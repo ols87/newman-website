@@ -8,7 +8,7 @@ module.exports = {
     {
       title: 'EuroCham',
       description: '<h5>The European Chamber of Commerce in Vietnam</h5>',
-      images: ['/assets/images/content/eurocham-1.png', '/assets/images/content/eurocham-2.png', '/assets/images/content/eurocham-3.png'],
+      images: ['/assets/images/content/eurocham-1.png', '/assets/images/content/eurocham-3.png'],
     },
     {
       title: 'Saigon-Hanoi Securities',

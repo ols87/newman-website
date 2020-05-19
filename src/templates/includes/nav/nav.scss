@@ -50,6 +50,10 @@
     @apply flex-col hidden absolute bg-white justify-start border-l border-gray-300 w-full shadow;
     top: 47px;
   }
+
+  ul li a {
+    @apply block;
+  }
 }
 
 .site-header {

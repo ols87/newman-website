@@ -18,7 +18,7 @@ module.exports = {
     {
       title: 'EuroCham',
       description: '<h5>The European Chamber of Commerce in Vietnam</h5>',
-      images: ['/assets/images/copy/eurocham-1.png', '/assets/images/copy/eurocham-1.png'],
+      images: ['/assets/images/copy/eurocham-1.png', '/assets/images/copy/eurocham-2.png'],
     },
     {
       title: 'Audier & Partners Law Firm',
