@@ -1,0 +1,68 @@
+.home-content {
+  @apply border-b border-gray-300 pb-20 mt-0;
+
+  @screen md {
+    @apply pb-24;
+  }
+
+  @screen lg {
+    @apply pb-32;
+  }
+}
+
+.content-left {
+  @apply w-1/2;
+
+  @screen sm {
+    @apply w-1/3;
+  }
+
+  h3 {
+    @apply text-4xl mb-12;
+  }
+
+  p {
+    @apply text-lg italic;
+  }
+}
+
+.content-right {
+  @apply w-full mt-8;
+
+  @screen sm {
+    @apply w-3/5 pl-16 pr-16 mt-20;
+  }
+
+  h3 {
+    @apply text-3xl leading-10 mb-3;
+  }
+
+  span {
+    @apply block leading-none -mb-12;
+    font-size: 100px;
+  }
+
+  h5 {
+    @apply text-xl font-bold mt-8 mb-4;
+  }
+
+  h6 {
+    @apply text-xl italic mb-4;
+  }
+
+  p {
+    @apply mb-4;
+  }
+
+  img {
+    @apply my-4 w-full;
+
+    @srceen sm {
+      @apply max-w-full;
+    }
+  }
+}
+
+.btn {
+  @apply font-sans font-semibold border-b-2 border-gray-500 leading-none inline-block;
+}

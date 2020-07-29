@@ -14,7 +14,6 @@ export const config: Config = {
   outputTargets: [
     {
       type: "www",
-      // comment the following line to disable service workers in production
       serviceWorker: null,
       baseUrl: "https://myapp.local/",
     },
@@ -22,7 +21,7 @@ export const config: Config = {
   plugins: [
     postcss({
       plugins: [
-        require("tailwindcss"),
+        require("tailwindcss")('./tailwind.config.js'),
         require("postcss-nested"),
         autoprefixer(),
         ...(process.env.NODE_ENV === "production"

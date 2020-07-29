@@ -6,15 +6,16 @@
   }
 
   &.container {
-    @apply mt-4 border-b border-gray-300;
+    @apply mt-4 border-0 border-solid border-b border-gray-300;
   }
 
   ul {
-    @apply flex justify-center list-none;
+    @apply flex justify-center list-none m-0 p-0;
   }
 
   ul li a {
     @apply inline-block px-6 py-4 whitespace-no-wrap no-underline;
+    color: var(--color-body);
 
     @screen md {
       @apply px-4;
@@ -22,3 +23,30 @@
   }
 }
 
+.site-header {
+  @apply font-serif text-center py-6;
+
+  &.container {
+    @apply border-0 border-solid border-b border-gray-300;
+  }
+
+  h1 {
+    @apply leading-none text-4xl;
+
+    @screen sm {
+      @apply text-5xl;
+    }
+
+    @screen md {
+      @apply text-6xl;
+    }
+
+    @screen lg {
+      font-size: 72px;
+    }
+  }
+
+  p {
+    @apply tracking-wider italic m-0;
+  }
+}
