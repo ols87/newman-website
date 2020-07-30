@@ -8,8 +8,8 @@ import {
 } from "@stencil/core";
 import home from "./store/home.store";
 import about from "./store/about.store";
-import copy from "./store/copy.store";
-import comms from "./store/comms.store";
+import copywriting from "./store/copy.store";
+import communications from "./store/comms.store";
 import content from "./store/content.store";
 import testimonials from "./store/testimonials.store";
 
@@ -22,19 +22,16 @@ export class PageTemplate implements ComponentInterface {
   @State() data: any;
 
   componentWillLoad() {
-    if (this.slug === "/") {
-      this.data = home;
-    } else if (this.slug === "/about/") {
-      this.data = about;
-    } else if (this.slug == "/copywriting/") {
-      this.data = copy;
-    } else if (this.slug === "/communications-consulting/") {
-      this.data = comms;
-    } else if (this.slug === "/content-editing/") {
-      this.data = content;
-    } else if (this.slug === "/testimonials/") {
-      this.data = testimonials;
-    }
+    const store = {
+      home,
+      about,
+      copywriting,
+      communications,
+      content,
+      testimonials,
+    };
+    const contentKey = this.slug.replace(/\//g, "").split("-")[0] || "home";
+    this.data = store[contentKey];
   }
 
   render() {
@@ -42,7 +39,7 @@ export class PageTemplate implements ComponentInterface {
       <Host>
         <site-head meta={this.data.meta}></site-head>
         <site-nav></site-nav>
-        
+
         {this.slug === "/" ? (
           <div>
             <home-content content={this.data.content}></home-content>
@@ -52,7 +49,7 @@ export class PageTemplate implements ComponentInterface {
         ) : (
           <page-content content={this.data}></page-content>
         )}
-        
+
         <site-footer></site-footer>
       </Host>
     );
