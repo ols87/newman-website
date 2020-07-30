@@ -1,21 +1,44 @@
-import { Component, h } from "@stencil/core";
+import { Component, h, State } from "@stencil/core";
 
 @Component({
   tag: "app-root",
   styleUrl: "app-root.css",
 })
 export class AppRoot {
+  @State() routes: any = [
+    {
+      slug: "/",
+    },
+    {
+      slug: "/about/",
+    },
+    {
+      slug: "/copywriting/",
+    },
+    {
+      slug: "/communications-consulting/",
+    },
+    {
+      slug: "/content-editing/",
+    },
+    {
+      slug: "/testimonials/",
+    },
+  ];
   render() {
     return (
       <div>
-        <header>
-          <site-nav></site-nav>
-        </header>
-
         <main>
           <stencil-router>
             <stencil-route-switch scrollTopOffset={0}>
-              <stencil-route url="/" component="page-home" exact={true} />
+              {this.routes.map((route) => (
+                <stencil-route
+                  url={route.slug}
+                  component={`page-template`}
+                  componentProps={{ slug: route.slug }}
+                  exact={route.slug === "/" ? true : false}
+                />
+              ))}
             </stencil-route-switch>
           </stencil-router>
         </main>

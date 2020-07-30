@@ -1,6 +1,11 @@
 import { createStore } from "@stencil/store";
 
 const { state } = createStore({
+  meta:{
+    title:"Laurence Newman",
+    description:"Freelance Writer, Editor, & Communications Consultant",
+    keywords:"Writer | Communications Consultant | Editor"
+  },
   content: {
     image: "/assets/images/laurence.png",
     title: "Freelance Writer, Editor, & Communications Consultant",

@@ -1,0 +1,56 @@
+.services {
+  @apply border-b pt-12 pb-24 border-gray-300;
+
+  @screen sm {
+    @apply pt-12 pb-24;
+  }
+
+  @screen lg {
+    @apply pt-20 pb-32;
+  }
+
+  h2 {
+    @apply text-5xl leading-none mb-0;
+
+    @screen sm {
+      @apply mb-4;
+    }
+
+    @screen lg {
+      @apply mb-12;
+    }
+  }
+}
+
+.service-items {
+  @apply flex flex-wrap;
+
+  @screen sm {
+    @apply justify-between;
+  }
+}
+
+.service-item {
+  @apply w-full mt-8;
+
+  @screen sm {
+    @apply mt-0;
+    width: 150px;
+  }
+
+  @screen md {
+    width: 210px;
+  }
+
+  @screen xl {
+    width: 270px;
+  }
+
+  h3 {
+    @apply text-3xl;
+  }
+
+  p {
+    @apply my-4;
+  }
+}

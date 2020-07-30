@@ -13,9 +13,6 @@ body {
   @apply font-sans text-sm;
   color: var(--color-body);
 }
-.container {
-  @apply m-auto px-6 box-border;
-}
 
 h1,
 h2,
@@ -24,4 +21,16 @@ h4,
 h5,
 h6 {
   @apply font-serif m-0 font-normal;
+}
+
+.container {
+  @apply m-auto px-6 box-border;
+
+  @screen lg {
+    @apply px-32;
+  }
+}
+
+.btn {
+  @apply font-sans font-semibold border-b-2 border-gray-500 leading-none inline-block;
 }

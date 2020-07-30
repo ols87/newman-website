@@ -1,3 +1,11 @@
+.content {
+  @apply flex flex-col items-center my-8;
+
+  @screen sm {
+    @apply flex-row;
+  }
+}
+
 .home-content {
   @apply border-b border-gray-300 pb-20 mt-0;
 
@@ -61,8 +69,4 @@
       @apply max-w-full;
     }
   }
-}
-
-.btn {
-  @apply font-sans font-semibold border-b-2 border-gray-500 leading-none inline-block;
 }

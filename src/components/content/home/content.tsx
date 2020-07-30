@@ -1,20 +1,24 @@
-import { Component, ComponentInterface, Host, h } from "@stencil/core";
+import { Component, ComponentInterface, Host, h, Prop } from "@stencil/core";
 
 @Component({
-  tag: "site-content",
+  tag: "home-content",
   styleUrl: "content.css",
 })
 export class SiteContent implements ComponentInterface {
+  @Prop() content: any;
+
   render() {
     return (
       <Host>
         <div class="content home-content container">
           <div class="content-left">
-            <img src="{{= nm.content.image}}" />
+            <img src={this.content.image} />
           </div>
 
           <div class="content-right">
-            <a href="/about" class="btn">
+            <h3>{this.content.title}</h3>
+            <div innerHTML={this.content.body}></div>
+            <a href="/about/" class="btn">
               LEARN MORE
             </a>
           </div>

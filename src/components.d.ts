@@ -8,11 +8,27 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface AppRoot {
     }
-    interface PageHome {
+    interface HomeContent {
+        "content": any;
     }
-    interface SiteContent {
+    interface PageContent {
+        "content": any;
+    }
+    interface PageTemplate {
+        "slug": any;
+    }
+    interface SiteClients {
+        "clients": any;
+    }
+    interface SiteFooter {
+    }
+    interface SiteHead {
+        "meta": any;
     }
     interface SiteNav {
+    }
+    interface SiteServices {
+        "services": any;
     }
 }
 declare global {
@@ -22,17 +38,41 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
-    interface HTMLPageHomeElement extends Components.PageHome, HTMLStencilElement {
+    interface HTMLHomeContentElement extends Components.HomeContent, HTMLStencilElement {
     }
-    var HTMLPageHomeElement: {
-        prototype: HTMLPageHomeElement;
-        new (): HTMLPageHomeElement;
+    var HTMLHomeContentElement: {
+        prototype: HTMLHomeContentElement;
+        new (): HTMLHomeContentElement;
     };
-    interface HTMLSiteContentElement extends Components.SiteContent, HTMLStencilElement {
+    interface HTMLPageContentElement extends Components.PageContent, HTMLStencilElement {
     }
-    var HTMLSiteContentElement: {
-        prototype: HTMLSiteContentElement;
-        new (): HTMLSiteContentElement;
+    var HTMLPageContentElement: {
+        prototype: HTMLPageContentElement;
+        new (): HTMLPageContentElement;
+    };
+    interface HTMLPageTemplateElement extends Components.PageTemplate, HTMLStencilElement {
+    }
+    var HTMLPageTemplateElement: {
+        prototype: HTMLPageTemplateElement;
+        new (): HTMLPageTemplateElement;
+    };
+    interface HTMLSiteClientsElement extends Components.SiteClients, HTMLStencilElement {
+    }
+    var HTMLSiteClientsElement: {
+        prototype: HTMLSiteClientsElement;
+        new (): HTMLSiteClientsElement;
+    };
+    interface HTMLSiteFooterElement extends Components.SiteFooter, HTMLStencilElement {
+    }
+    var HTMLSiteFooterElement: {
+        prototype: HTMLSiteFooterElement;
+        new (): HTMLSiteFooterElement;
+    };
+    interface HTMLSiteHeadElement extends Components.SiteHead, HTMLStencilElement {
+    }
+    var HTMLSiteHeadElement: {
+        prototype: HTMLSiteHeadElement;
+        new (): HTMLSiteHeadElement;
     };
     interface HTMLSiteNavElement extends Components.SiteNav, HTMLStencilElement {
     }
@@ -40,27 +80,59 @@ declare global {
         prototype: HTMLSiteNavElement;
         new (): HTMLSiteNavElement;
     };
+    interface HTMLSiteServicesElement extends Components.SiteServices, HTMLStencilElement {
+    }
+    var HTMLSiteServicesElement: {
+        prototype: HTMLSiteServicesElement;
+        new (): HTMLSiteServicesElement;
+    };
     interface HTMLElementTagNameMap {
         "app-root": HTMLAppRootElement;
-        "page-home": HTMLPageHomeElement;
-        "site-content": HTMLSiteContentElement;
+        "home-content": HTMLHomeContentElement;
+        "page-content": HTMLPageContentElement;
+        "page-template": HTMLPageTemplateElement;
+        "site-clients": HTMLSiteClientsElement;
+        "site-footer": HTMLSiteFooterElement;
+        "site-head": HTMLSiteHeadElement;
         "site-nav": HTMLSiteNavElement;
+        "site-services": HTMLSiteServicesElement;
     }
 }
 declare namespace LocalJSX {
     interface AppRoot {
     }
-    interface PageHome {
+    interface HomeContent {
+        "content"?: any;
     }
-    interface SiteContent {
+    interface PageContent {
+        "content"?: any;
+    }
+    interface PageTemplate {
+        "slug"?: any;
+    }
+    interface SiteClients {
+        "clients"?: any;
+    }
+    interface SiteFooter {
+    }
+    interface SiteHead {
+        "meta"?: any;
     }
     interface SiteNav {
     }
+    interface SiteServices {
+        "services"?: any;
+    }
     interface IntrinsicElements {
         "app-root": AppRoot;
-        "page-home": PageHome;
-        "site-content": SiteContent;
+        "home-content": HomeContent;
+        "page-content": PageContent;
+        "page-template": PageTemplate;
+        "site-clients": SiteClients;
+        "site-footer": SiteFooter;
+        "site-head": SiteHead;
         "site-nav": SiteNav;
+        "site-services": SiteServices;
     }
 }
 export { LocalJSX as JSX };
@@ -68,9 +140,14 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
-            "page-home": LocalJSX.PageHome & JSXBase.HTMLAttributes<HTMLPageHomeElement>;
-            "site-content": LocalJSX.SiteContent & JSXBase.HTMLAttributes<HTMLSiteContentElement>;
+            "home-content": LocalJSX.HomeContent & JSXBase.HTMLAttributes<HTMLHomeContentElement>;
+            "page-content": LocalJSX.PageContent & JSXBase.HTMLAttributes<HTMLPageContentElement>;
+            "page-template": LocalJSX.PageTemplate & JSXBase.HTMLAttributes<HTMLPageTemplateElement>;
+            "site-clients": LocalJSX.SiteClients & JSXBase.HTMLAttributes<HTMLSiteClientsElement>;
+            "site-footer": LocalJSX.SiteFooter & JSXBase.HTMLAttributes<HTMLSiteFooterElement>;
+            "site-head": LocalJSX.SiteHead & JSXBase.HTMLAttributes<HTMLSiteHeadElement>;
             "site-nav": LocalJSX.SiteNav & JSXBase.HTMLAttributes<HTMLSiteNavElement>;
+            "site-services": LocalJSX.SiteServices & JSXBase.HTMLAttributes<HTMLSiteServicesElement>;
         }
     }
 }

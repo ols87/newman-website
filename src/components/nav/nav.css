@@ -5,7 +5,7 @@
     @apply block;
   }
 
-  &.container {
+  & .container {
     @apply mt-4 border-0 border-solid border-b border-gray-300;
   }
 
@@ -19,7 +19,46 @@
 
     @screen md {
       @apply px-4;
+
+      &:active,
+      &:hover,
+      &:visited {
+        border-bottom: 1px solid;
+        @apply border-gray-500;
+      }
     }
+  }
+}
+
+.mb-nav {
+  @apply block border-b border-gray-300;
+  padding: 10px 0;
+
+  @screen md {
+    @apply hidden;
+  }
+
+  .mb-nav-icon {
+    @apply w-8 mx-auto cursor-pointer;
+
+    span {
+      @apply block w-full bg-gray-900;
+      height: 2px;
+      margin: 5px 0;
+    }
+  }
+
+  #toggle-nav:checked + ul {
+    @apply block py-2;
+  }
+
+  ul {
+    @apply flex-col hidden absolute bg-white justify-start border-l border-gray-300 w-full shadow;
+    top: 47px;
+  }
+
+  ul li a {
+    @apply block;
   }
 }
 
