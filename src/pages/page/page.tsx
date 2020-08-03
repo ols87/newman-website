@@ -13,6 +13,8 @@ import communications from "./store/comms.store";
 import content from "./store/content.store";
 import testimonials from "./store/testimonials.store";
 
+import StoryblokService from "../../storyblok-service";
+
 @Component({
   tag: "page-template",
   styleUrl: "page.css",
@@ -20,6 +22,7 @@ import testimonials from "./store/testimonials.store";
 export class PageTemplate implements ComponentInterface {
   @Prop() slug: any;
   @State() data: any;
+  @State() hero: any;
 
   componentWillLoad() {
     const store = {
@@ -32,13 +35,23 @@ export class PageTemplate implements ComponentInterface {
     };
     const contentKey = this.slug.replace(/\//g, "").split("-")[0] || "home";
     this.data = store[contentKey];
+
+    StoryblokService.get("cdn/stories/")
+      .then((res) => {
+        this.hero = res.data.stories[0].content.body[0];
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    StoryblokService.initEditor(this);
   }
 
   render() {
     return (
       <Host>
         <site-head meta={this.data.meta}></site-head>
-        <site-nav></site-nav>
+        <site-nav hero={this.hero}></site-nav>
 
         {this.slug === "/" ? (
           <div>

@@ -25,6 +25,7 @@ export class AppRoot {
       slug: "/testimonials/",
     },
   ];
+
   render() {
     return (
       <div>
@@ -42,6 +43,10 @@ export class AppRoot {
             </stencil-route-switch>
           </stencil-router>
         </main>
+        <script
+          src="//app.storyblok.com/f/storyblok-latest.js?t=InWwaOQ9Br8jsKZwcCOybwtt"
+          type="text/javascript"
+        ></script>
       </div>
     );
   }

@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h, Host } from "@stencil/core";
+import { Component, ComponentInterface, h, Host, Prop } from "@stencil/core";
 import state from "./nav.store";
 
 @Component({
@@ -6,8 +6,9 @@ import state from "./nav.store";
   styleUrl: "nav.css",
 })
 export class SiteNav implements ComponentInterface {
+  @Prop() hero: any;
   render() {
-    const { links, hero } = state;
+    const { links } = state;
     return (
       <Host>
         <nav class="site-nav">
@@ -41,8 +42,8 @@ export class SiteNav implements ComponentInterface {
         </nav>
 
         <header class="site-header container">
-          <h1>{hero.title}</h1>
-          <p>{hero.text}</p>
+          <h1>{this.hero.title}</h1>
+          <p>{this.hero.text}</p>
         </header>
       </Host>
     );
