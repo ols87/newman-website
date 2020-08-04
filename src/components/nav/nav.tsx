@@ -7,6 +7,7 @@ import state from "./nav.store";
 })
 export class SiteNav implements ComponentInterface {
   @Prop() hero: any;
+
   render() {
     const { links } = state;
     return (
@@ -31,7 +32,9 @@ export class SiteNav implements ComponentInterface {
               <span></span>
             </label>
           </div>
+
           <input id="toggle-nav" type="checkbox" class="hidden" />
+
           <ul>
             {links.map((link) => (
               <li>

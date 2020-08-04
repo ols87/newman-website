@@ -24,7 +24,7 @@ export class PageTemplate implements ComponentInterface {
   @State() data: any;
   @State() hero: any;
 
-  componentWillLoad() {
+  async componentWillLoad() {
     const store = {
       home,
       about,
@@ -33,18 +33,14 @@ export class PageTemplate implements ComponentInterface {
       content,
       testimonials,
     };
+
     const contentKey = this.slug.replace(/\//g, "").split("-")[0] || "home";
+
     this.data = store[contentKey];
 
-    StoryblokService.get("cdn/stories/")
-      .then((res) => {
-        this.hero = res.data.stories[0].content.body[0];
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    const response = await StoryblokService.get("cdn/stories/");
 
-    StoryblokService.initEditor(this);
+    this.hero = response.data.stories[0].content.body[0];
   }
 
   render() {
