@@ -12,17 +12,17 @@ export class PageContent implements ComponentInterface {
       <Host>
         <div class="content container">
           <div class="content-left">
-            <h3>{this.content[1].title}</h3>
-            {this.content[2]?.content?.length > 0 &&
-              this.content[2].content.map((item) => (
+            <h3>{this.content.title}</h3>
+            {this.content?.content?.length > 0 &&
+              this.content.content.map((item) => (
                 <a href={`#${item.title}`}>{item.title}</a>
               ))}
-            <img src={this.content[1]?.content[1]?.slug} />
+            <img src={this.content?.avatar?.url} />
           </div>
 
           <div class="content-right">
-            {this.content[4]?.content?.length > 0 &&
-              this.content[4]?.content?.map((item) => (
+            {this.content?.quotes?.length > 0 &&
+              this.content?.quotes?.map((item) => (
                 <div>
                   <span>&ldquo;</span>
                   <h6>
@@ -33,15 +33,15 @@ export class PageContent implements ComponentInterface {
                   <hr />
                 </div>
               ))}
-            {this.content[3].content && (
+            {this.content.quote && (
               <div>
                 <span>&ldquo;</span>
-                <h6>{this.content[3].content}</h6>
+                <h6>{this.content.quote}</h6>
               </div>
             )}
 
-            {this.content[2]?.content?.length > 0 &&
-              this.content[2].content.map((content) => (
+            {this.content?.content?.length > 0 &&
+              this.content.content.map((content) => (
                 <section id={content.title}>
                   <div innerHTML={content.description}></div>
                   {content.images.map((image) => (

@@ -39,10 +39,9 @@ export class PageTemplate implements ComponentInterface {
   @Prop() slug: any;
   @State() data: any;
   @State() services: any;
-  @State() pageContent:any;
-  @State() homeContent: any;
-  @State() meta:any;
-  @State() clients:any;
+  @State() pageContent: any;
+  @State() meta: any;
+  @State() clients: any;
 
   async componentWillLoad() {
     const store = {
@@ -61,15 +60,14 @@ export class PageTemplate implements ComponentInterface {
     const response = await api.client.query({
       query: query,
       variables: {
-        id: this.slug === "/" ? "3fc5a2b1-ecf8-49f2-98d2-606cd45f5091" : this.slug,
+        id:
+          this.slug === "/"
+            ? "3fc5a2b1-ecf8-49f2-98d2-606cd45f5091"
+            : this.slug,
       },
     });
     this.meta = response.data.PageItem.content.body[0];
-    this.homeContent = response.data.PageItem.content.body[1]
-    this.services = response.data.PageItem.content.body[2];
-    this.clients = response.data.PageItem.content.body[3].logos;
-
-    this.pageContent = response.data.PageItem.content.body;
+    this.pageContent = response.data.PageItem.content.body[1];
   }
 
   render() {
@@ -80,9 +78,11 @@ export class PageTemplate implements ComponentInterface {
 
         {this.slug === "/" ? (
           <div>
-            <home-content content={this.homeContent}></home-content>
-            <site-services services={this.services}></site-services>
-            <site-clients clients={this.clients}></site-clients>
+            <home-content content={this.pageContent.data[0]}></home-content>
+            <site-services
+              services={this.pageContent?.servicess}
+            ></site-services>
+            <site-clients clients={this.pageContent?.clients}></site-clients>
           </div>
         ) : (
           <page-content content={this.pageContent}></page-content>

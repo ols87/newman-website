@@ -30,7 +30,7 @@ const { state } = createStore({
       {
         name: "Editing",
         content:
-          "I help clients to produce pitch-perfect print and digital content in an original, professional, and consistent tone of voice..",
+          "I help clients to produce pitch-perfect print and digital content in an original, professional, and consistent tone of voice.",
         link: "/content-editing/",
       },
     ],
