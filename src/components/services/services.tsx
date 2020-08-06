@@ -11,14 +11,14 @@ export class SiteServices implements ComponentInterface {
     return (
       <Host>
         <section class="services container">
-          <h2>{this.services.title}</h2>
+          <h2>{this.services.title.content[0].content[0].text}</h2>
           <div class="service-items">
-            {this.services.list.map((service) => (
+            {this.services.item.map((service) => (
               <div class="service-item">
-                <h3>{service.name}</h3>
-                <p>{service.content}</p>
-                <a href={service.link} class="btn">
-                  LEARN MORE
+                <h3>{service.content[0].title.content[0].content[0].text}</h3>
+                <p>{service.content[1].content}</p>
+                <a href={service.content[2].slug.url} class="btn">
+                  {service.content[2].title}
                 </a>
               </div>
             ))}

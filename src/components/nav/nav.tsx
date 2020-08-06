@@ -1,23 +1,57 @@
-import { Component, ComponentInterface, h, Host, Prop } from "@stencil/core";
-import state from "./nav.store";
+import {
+  Component,
+  ComponentInterface,
+  h,
+  Host,
+  State,
+} from "@stencil/core";
+
+import { ApiService } from "../../services/api";
+
+const api = new ApiService();
+
+const query = api.gql(`
+  query($id: ID!)
+  {
+    PageItem(id: $id) {
+      name
+      content {
+         _uid
+         component,
+         body
+      }
+    }
+  }
+`);
 
 @Component({
   tag: "site-nav",
   styleUrl: "nav.css",
 })
 export class SiteNav implements ComponentInterface {
-  @Prop() hero: any;
+  @State() hero: any;
+  @State() links: any;
+
+  async componentWillLoad() {
+    const res = await api.client.query({
+      query: query,
+      variables: {
+        id: "/layout/nav",
+      },
+    });
+    this.links = res.data.PageItem.content.body[0].content;
+    this.hero = res.data.PageItem.content.body[1];
+  }
 
   render() {
-    const { links } = state;
     return (
       <Host>
         <nav class="site-nav">
           <div class="container">
             <ul>
-              {links.map((link) => (
+              {this.links.map((link) => (
                 <li>
-                  <a href={link.slug}>{link.title}</a>
+                  <a href={link.slug.url}>{link.title}</a>
                 </li>
               ))}
             </ul>
@@ -36,9 +70,9 @@ export class SiteNav implements ComponentInterface {
           <input id="toggle-nav" type="checkbox" class="hidden" />
 
           <ul>
-            {links.map((link) => (
+            {this.links.map((link) => (
               <li>
-                <a href={link.slug}>{link.title}</a>
+                <a href={link.slug.url}>{link.title}</a>
               </li>
             ))}
           </ul>

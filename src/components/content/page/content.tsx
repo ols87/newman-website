@@ -8,23 +8,21 @@ export class PageContent implements ComponentInterface {
   @Prop() content: any;
 
   render() {
-    const { title, avatar, quote, quotes, content } = this.content;
-
     return (
       <Host>
         <div class="content container">
           <div class="content-left">
-            <h3>{title}</h3>
-            {content &&
-              content.map((item) => (
+            <h3>{this.content[1].title}</h3>
+            {this.content[2]?.content?.length > 0 &&
+              this.content[2].content.map((item) => (
                 <a href={`#${item.title}`}>{item.title}</a>
               ))}
-            <img src={avatar} />
+            <img src={this.content[1]?.content[1]?.slug} />
           </div>
 
           <div class="content-right">
-            {quotes &&
-              quotes.map((item) => (
+            {this.content[4]?.content?.length > 0 &&
+              this.content[4]?.content?.map((item) => (
                 <div>
                   <span>&ldquo;</span>
                   <h6>
@@ -35,19 +33,19 @@ export class PageContent implements ComponentInterface {
                   <hr />
                 </div>
               ))}
-            {quote && (
+            {this.content[3].content && (
               <div>
                 <span>&ldquo;</span>
-                <h6>{quote}</h6>
+                <h6>{this.content[3].content}</h6>
               </div>
             )}
 
-            {content &&
-              content.map((content) => (
+            {this.content[2]?.content?.length > 0 &&
+              this.content[2].content.map((content) => (
                 <section id={content.title}>
                   <div innerHTML={content.description}></div>
                   {content.images.map((image) => (
-                    <img src={image} />
+                    <img src={image.slug} />
                   ))}
                 </section>
               ))}

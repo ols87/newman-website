@@ -18,7 +18,7 @@ export class SiteContent implements ComponentInterface {
           <div class="content-right">
             <h3>{this.content.title}</h3>
             <div innerHTML={this.content.body}></div>
-            <a href="/about/" class="btn">
+            <a href={this.content.url.url} class="btn">
               LEARN MORE
             </a>
           </div>

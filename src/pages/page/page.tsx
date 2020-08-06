@@ -13,7 +13,23 @@ import communications from "./store/comms.store";
 import content from "./store/content.store";
 import testimonials from "./store/testimonials.store";
 
-import StoryblokService from "../../storyblok-service";
+import { ApiService } from "../../services/api";
+
+const api = new ApiService();
+
+const query = api.gql(`
+  query($id: ID!)
+  {
+    PageItem(id: $id) {
+      name
+      content {
+         _uid
+         component,
+         body
+      }
+    }
+  }
+`);
 
 @Component({
   tag: "page-template",
@@ -22,7 +38,11 @@ import StoryblokService from "../../storyblok-service";
 export class PageTemplate implements ComponentInterface {
   @Prop() slug: any;
   @State() data: any;
-  @State() hero: any;
+  @State() services: any;
+  @State() pageContent:any;
+  @State() homeContent: any;
+  @State() meta:any;
+  @State() clients:any;
 
   async componentWillLoad() {
     const store = {
@@ -38,25 +58,34 @@ export class PageTemplate implements ComponentInterface {
 
     this.data = store[contentKey];
 
-    const response = await StoryblokService.get("cdn/stories/");
+    const response = await api.client.query({
+      query: query,
+      variables: {
+        id: this.slug === "/" ? "3fc5a2b1-ecf8-49f2-98d2-606cd45f5091" : this.slug,
+      },
+    });
+    this.meta = response.data.PageItem.content.body[0];
+    this.homeContent = response.data.PageItem.content.body[1]
+    this.services = response.data.PageItem.content.body[2];
+    this.clients = response.data.PageItem.content.body[3].logos;
 
-    this.hero = response.data.stories[0].content.body[0];
+    this.pageContent = response.data.PageItem.content.body;
   }
 
   render() {
     return (
       <Host>
-        <site-head meta={this.data.meta}></site-head>
-        <site-nav hero={this.hero}></site-nav>
+        <site-head meta={this.meta}></site-head>
+        <site-nav></site-nav>
 
         {this.slug === "/" ? (
           <div>
-            <home-content content={this.data.content}></home-content>
-            <site-services services={this.data.services}></site-services>
-            <site-clients clients={this.data.clients}></site-clients>
+            <home-content content={this.homeContent}></home-content>
+            <site-services services={this.services}></site-services>
+            <site-clients clients={this.clients}></site-clients>
           </div>
         ) : (
-          <page-content content={this.data}></page-content>
+          <page-content content={this.pageContent}></page-content>
         )}
 
         <site-footer></site-footer>

@@ -26,7 +26,6 @@ export namespace Components {
         "meta": any;
     }
     interface SiteNav {
-        "hero": any;
     }
     interface SiteServices {
         "services": any;
@@ -120,7 +119,6 @@ declare namespace LocalJSX {
         "meta"?: any;
     }
     interface SiteNav {
-        "hero"?: any;
     }
     interface SiteServices {
         "services"?: any;

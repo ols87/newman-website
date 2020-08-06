@@ -11,12 +11,12 @@ export class SiteClients implements ComponentInterface {
     return (
       <Host>
         <section class="clients">
-          <h2 class="container">{this.clients.title}</h2>
+          <h2 class="container">Clients</h2>
           <div class="client-logos">
             <div class="container">
-              {this.clients.list.map((logo) => (
+              {this.clients.map((logo) => (
                 <div class="client-logo">
-                  <img src={`/assets/images/clients/${logo}.png`} />
+                  <img src={`/assets/images/clients/${logo.slug}.png`} />
                 </div>
               ))}
             </div>
