@@ -6,14 +6,8 @@ import {
   Prop,
   State,
 } from "@stencil/core";
-import home from "./store/home.store";
-import about from "./store/about.store";
-import copywriting from "./store/copy.store";
-import communications from "./store/comms.store";
-import content from "./store/content.store";
-import testimonials from "./store/testimonials.store";
 
-import { ApiService } from "../../services/api";
+import { ApiService } from "../services/api";
 
 const api = new ApiService();
 
@@ -44,19 +38,6 @@ export class PageTemplate implements ComponentInterface {
   @State() clients: any;
 
   async componentWillLoad() {
-    const store = {
-      home,
-      about,
-      copywriting,
-      communications,
-      content,
-      testimonials,
-    };
-
-    const contentKey = this.slug.replace(/\//g, "").split("-")[0] || "home";
-
-    this.data = store[contentKey];
-
     const response = await api.client.query({
       query: query,
       variables: {
