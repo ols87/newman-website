@@ -11,6 +11,7 @@
     "generate": "stencil generate"
   },
   "devDependencies": {
+    "@alepop/stencil-env": "^0.4.1",
     "@stencil/core": "^1.17.3",
     "@stencil/helmet": "^0.3.2",
     "@stencil/postcss": "^1.0.1",
