@@ -1,10 +1,8 @@
 import ApolloClient, { DocumentNode } from "apollo-boost";
 import gql from "graphql-tag";
 
-const ENV = process.env.NODE_ENV;
-
-const token = ENV === "production" ? process.env.PUBLISH_TOKEN : process.env.PREVIEW_TOKEN;
-const version = ENV ===  "production" ? process.env.PUBLISH_VERSION : process.env.PREVIEW_VERSION;
+const token = process.env.TOKEN;
+const version = process.env.VERSION;
 
 export class ApiService {
   public client: any;
