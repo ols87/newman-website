@@ -4,7 +4,8 @@ import autoprefixer from "autoprefixer";
 import { env } from "@alepop/stencil-env";
 
 const purgecss = require("@fullhuman/postcss-purgecss")({
-  content: ["./src/**/*.tsx","./src/**/*.css", "./src/index.html"],
+  content: ["./src/**/*.tsx", "./src/index.html"],
+  css:["./src/**/*.css"],
   defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
 });
 
