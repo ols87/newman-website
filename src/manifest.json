@@ -1,10 +1,10 @@
 {
-  "name": "Stencil Starter",
-  "short_name": "Stencil",
+  "name": "Laurence Newman",
+  "short_name": "Laurence Newman",
   "start_url": "/",
   "display": "standalone",
   "icons": [{
-    "src": "assets/icon/icon.png",
+    "src": "assets/icon/manifest-icon-512.png",
     "sizes": "512x512",
     "type": "image/png"
   }],
