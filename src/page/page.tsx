@@ -51,10 +51,26 @@ export class PageTemplate implements ComponentInterface {
     this.pageContent = response.data.PageItem.content.body[1];
   }
 
+  createMetaTags({ title, description, keywords }: any) {
+    document.title = title;
+
+    let desc = document.createElement("meta");
+    desc.content = description;
+    desc.name = "description";
+    document.getElementsByTagName("head")[0].appendChild(desc);
+
+    let keyword = document.createElement("meta");
+    keyword.content = keywords;
+    keyword.name = "keywords";
+    document.getElementsByTagName("head")[0].appendChild(keyword);
+  
+  }
+
   render() {
     return (
       <Host>
-        <site-head meta={this.meta}></site-head>
+        {this.createMetaTags(this.meta)}
+
         <site-nav></site-nav>
 
         {this.slug === "/" ? (

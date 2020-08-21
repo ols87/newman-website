@@ -18,6 +18,7 @@ export const config: Config = {
       type: "www",
       serviceWorker: null,
       baseUrl: "https://myapp.local/",
+      // prerenderConfig: "./prerender.config.ts",
     },
   ],
   plugins: [
