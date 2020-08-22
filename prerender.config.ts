@@ -8,7 +8,4 @@ export const config: PrerenderConfig = {
       removeUnusedStyles: true,
     };
   },
-  async afterHydrate(document, url) {
-    document.title = url.pathname;
-  },
 };

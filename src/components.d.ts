@@ -22,9 +22,6 @@ export namespace Components {
     }
     interface SiteFooter {
     }
-    interface SiteHead {
-        "meta": any;
-    }
     interface SiteNav {
     }
     interface SiteServices {
@@ -68,12 +65,6 @@ declare global {
         prototype: HTMLSiteFooterElement;
         new (): HTMLSiteFooterElement;
     };
-    interface HTMLSiteHeadElement extends Components.SiteHead, HTMLStencilElement {
-    }
-    var HTMLSiteHeadElement: {
-        prototype: HTMLSiteHeadElement;
-        new (): HTMLSiteHeadElement;
-    };
     interface HTMLSiteNavElement extends Components.SiteNav, HTMLStencilElement {
     }
     var HTMLSiteNavElement: {
@@ -93,7 +84,6 @@ declare global {
         "page-template": HTMLPageTemplateElement;
         "site-clients": HTMLSiteClientsElement;
         "site-footer": HTMLSiteFooterElement;
-        "site-head": HTMLSiteHeadElement;
         "site-nav": HTMLSiteNavElement;
         "site-services": HTMLSiteServicesElement;
     }
@@ -115,9 +105,6 @@ declare namespace LocalJSX {
     }
     interface SiteFooter {
     }
-    interface SiteHead {
-        "meta"?: any;
-    }
     interface SiteNav {
     }
     interface SiteServices {
@@ -130,7 +117,6 @@ declare namespace LocalJSX {
         "page-template": PageTemplate;
         "site-clients": SiteClients;
         "site-footer": SiteFooter;
-        "site-head": SiteHead;
         "site-nav": SiteNav;
         "site-services": SiteServices;
     }
@@ -145,7 +131,6 @@ declare module "@stencil/core" {
             "page-template": LocalJSX.PageTemplate & JSXBase.HTMLAttributes<HTMLPageTemplateElement>;
             "site-clients": LocalJSX.SiteClients & JSXBase.HTMLAttributes<HTMLSiteClientsElement>;
             "site-footer": LocalJSX.SiteFooter & JSXBase.HTMLAttributes<HTMLSiteFooterElement>;
-            "site-head": LocalJSX.SiteHead & JSXBase.HTMLAttributes<HTMLSiteHeadElement>;
             "site-nav": LocalJSX.SiteNav & JSXBase.HTMLAttributes<HTMLSiteNavElement>;
             "site-services": LocalJSX.SiteServices & JSXBase.HTMLAttributes<HTMLSiteServicesElement>;
         }

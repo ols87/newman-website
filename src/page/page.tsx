@@ -63,7 +63,6 @@ export class PageTemplate implements ComponentInterface {
     keyword.content = keywords;
     keyword.name = "keywords";
     document.getElementsByTagName("head")[0].appendChild(keyword);
-  
   }
 
   render() {

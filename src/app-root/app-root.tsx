@@ -44,7 +44,7 @@ export class AppRoot {
           </stencil-router>
         </main>
         <script
-          src="//app.storyblok.com/f/storyblok-latest.js?t=InWwaOQ9Br8jsKZwcCOybwtt"
+          src={`//app.storyblok.com/f/storyblok-latest.js?t=${process.env.TOKEN}`}
           type="text/javascript"
         ></script>
       </div>

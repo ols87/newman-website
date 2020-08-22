@@ -1,5 +1,7 @@
 module.exports = {
-  purge: [],
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
   theme: {
     extend: {},
     fontFamily: {
@@ -9,5 +11,4 @@ module.exports = {
   },
   variants: {},
   plugins: [],
-  purge: false
 };

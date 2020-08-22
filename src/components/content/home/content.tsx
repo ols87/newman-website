@@ -1,11 +1,4 @@
-import {
-  Component,
-  ComponentInterface,
-  Host,
-  h,
-  Prop,
-  State,
-} from "@stencil/core";
+import { Component, ComponentInterface, Host, h, Prop } from "@stencil/core";
 
 import { storyBlok } from "../../../storyblok";
 
@@ -16,10 +9,7 @@ import { storyBlok } from "../../../storyblok";
 export class SiteContent implements ComponentInterface {
   @Prop() content: any;
 
-  @State() storyBlok: any = storyBlok;
-
   render() {
-    console.log(this.content.body);
     return (
       <Host>
         <div class="content home-content container">
@@ -30,7 +20,7 @@ export class SiteContent implements ComponentInterface {
           <div class="content-right">
             <h3>{this.content.title}</h3>
             <div
-              innerHTML={this.storyBlok.client.richTextResolver.render(
+              innerHTML={storyBlok.client.richTextResolver.render(
                 this.content.body
               )}
             ></div>

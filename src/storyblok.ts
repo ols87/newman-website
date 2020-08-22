@@ -9,7 +9,7 @@ class StoryblokService {
   constructor() {
     this.devMode = false;
 
-    this.token = "InWwaOQ9Br8jsKZwcCOybwtt";
+    this.token = process.env.TOKEN;
 
     this.client = new StoryblokClient({
       accessToken: this.token,
