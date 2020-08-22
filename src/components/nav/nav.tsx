@@ -1,10 +1,4 @@
-import {
-  Component,
-  ComponentInterface,
-  h,
-  Host,
-  State,
-} from "@stencil/core";
+import { Component, ComponentInterface, h, Host, State } from "@stencil/core";
 
 import { ApiService } from "../../services/api";
 
@@ -31,6 +25,7 @@ const query = api.gql(`
 export class SiteNav implements ComponentInterface {
   @State() hero: any;
   @State() links: any;
+  @State() isOpenNav: boolean = false;
 
   async componentWillLoad() {
     const res = await api.client.query({
@@ -41,6 +36,10 @@ export class SiteNav implements ComponentInterface {
     });
     this.links = res.data.PageItem.content.body[0].content;
     this.hero = res.data.PageItem.content.body[1];
+  }
+  
+  toggleNav(){
+    this.isOpenNav = !this.isOpenNav;
   }
 
   render() {
@@ -60,22 +59,22 @@ export class SiteNav implements ComponentInterface {
 
         <nav class="site-nav mb-nav">
           <div class="mb-nav-icon">
-            <label htmlFor="toggle-nav">
+            <label onClick={()=>this.toggleNav()}>
               <span></span>
               <span></span>
               <span></span>
             </label>
           </div>
 
-          <input id="toggle-nav" type="checkbox" class="hidden" />
-
-          <ul>
-            {this.links.map((link) => (
-              <li>
-                <a href={link.slug.url}>{link.title}</a>
-              </li>
-            ))}
-          </ul>
+          {this.isOpenNav ? (
+            <ul>
+              {this.links.map((link) => (
+                <li>
+                  <a href={link.slug.url}>{link.title}</a>
+                </li>
+              ))}
+            </ul>
+          ) : null}
         </nav>
 
         <header class="site-header container">
