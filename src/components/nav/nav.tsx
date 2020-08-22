@@ -1,10 +1,4 @@
-import {
-  Component,
-  ComponentInterface,
-  h,
-  Host,
-  State,
-} from "@stencil/core";
+import { Component, ComponentInterface, h, Host, State } from "@stencil/core";
 
 import { ApiService } from "../../services/api";
 
@@ -44,6 +38,8 @@ export class SiteNav implements ComponentInterface {
   }
 
   render() {
+    const labelFor: any = { for: "toggle-nav" };
+
     return (
       <Host>
         <nav class="site-nav">
@@ -60,14 +56,19 @@ export class SiteNav implements ComponentInterface {
 
         <nav class="site-nav mb-nav">
           <div class="mb-nav-icon">
-            <label htmlFor="toggle-nav">
+            <label {...labelFor}>
               <span></span>
               <span></span>
               <span></span>
             </label>
           </div>
 
-          <input id="toggle-nav" type="checkbox" class="hidden" />
+          <input
+            id="toggle-nav"
+            name="toggle-nav"
+            type="checkbox"
+            class="hidden"
+          />
 
           <ul>
             {this.links.map((link) => (
