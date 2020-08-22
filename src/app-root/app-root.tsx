@@ -10,19 +10,19 @@ export class AppRoot {
       slug: "/",
     },
     {
-      slug: "about",
+      slug: "/about",
     },
     {
-      slug: "copywriting",
+      slug: "/copywriting",
     },
     {
-      slug: "communications-consulting",
+      slug: "/communications-consulting",
     },
     {
-      slug: "content-editing",
+      slug: "/content-editing",
     },
     {
-      slug: "testimonials",
+      slug: "/testimonials",
     },
   ];
 
