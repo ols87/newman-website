@@ -5,8 +5,8 @@ import { env } from "@alepop/stencil-env";
 
 const purgecss = require("@fullhuman/postcss-purgecss")({
   content: ["./src/**/*.tsx", "./src/index.html"],
-  css:["./src/**/*.css"],
-  defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+  css: ["./src/**/*.css"],
+  defaultExtractor: (content) => content.match(/[A-Za-z0-9-_:/]+/g) || [],
 });
 
 export const config: Config = {
@@ -17,8 +17,8 @@ export const config: Config = {
     {
       type: "www",
       serviceWorker: null,
-      baseUrl: "https://myapp.local/",
-      // prerenderConfig: "./prerender.config.ts",
+      baseUrl: "https://laurencedavidnewman.com/",
+      prerenderConfig: "./prerender.config.ts",
     },
   ],
   plugins: [
