@@ -1,6 +1,8 @@
 import { Component, ComponentInterface, Host, h, Prop } from "@stencil/core";
 
-import { storyBlok } from "../../../storyblok";
+import RichTextResolver from "storyblok-js-client/dist/richTextResolver";
+
+const htmlResolver = new RichTextResolver();
 
 @Component({
   tag: "page-content",
@@ -28,11 +30,7 @@ export class PageContent implements ComponentInterface {
                 <div>
                   <span>&ldquo;</span>
                   <h6>
-                    <div
-                      innerHTML={storyBlok.client.richTextResolver.render(
-                        item.content
-                      )}
-                    ></div>
+                    <div innerHTML={htmlResolver.render(item.content)}></div>
                   </h6>
                   <h5 class="author-quote">{item.author}</h5>
                   <br />
@@ -50,9 +48,7 @@ export class PageContent implements ComponentInterface {
               this.content.content.map((content) => (
                 <section id={content.title}>
                   <div
-                    innerHTML={storyBlok.client.richTextResolver.render(
-                      content.description
-                    )}
+                    innerHTML={htmlResolver.render(content.description)}
                   ></div>
                   {content.images.map((image) => (
                     <img src={image.slug} />

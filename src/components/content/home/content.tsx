@@ -1,6 +1,8 @@
 import { Component, ComponentInterface, Host, h, Prop } from "@stencil/core";
 
-import { storyBlok } from "../../../storyblok";
+import RichTextResolver from "storyblok-js-client/dist/richTextResolver";
+
+const htmlResolver = new RichTextResolver();
 
 @Component({
   tag: "home-content",
@@ -19,11 +21,7 @@ export class SiteContent implements ComponentInterface {
 
           <div class="content-right">
             <h3>{this.content.title}</h3>
-            <div
-              innerHTML={storyBlok.client.richTextResolver.render(
-                this.content.body
-              )}
-            ></div>
+            <div innerHTML={htmlResolver.render(this.content.body)}></div>
             <a href={this.content.url.url} class="btn">
               LEARN MORE
             </a>
