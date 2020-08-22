@@ -48,12 +48,8 @@
     }
   }
 
-  #toggle-nav:checked + ul {
-    @apply block py-2;
-  }
-
   ul {
-    @apply flex-col hidden absolute bg-white justify-start border-l border-gray-300 w-full shadow;
+    @apply flex-col absolute bg-white justify-start border-l border-gray-300 w-full shadow;
     top: 47px;
   }
 

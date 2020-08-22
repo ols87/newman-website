@@ -25,6 +25,7 @@ const query = api.gql(`
 export class SiteNav implements ComponentInterface {
   @State() hero: any;
   @State() links: any;
+  @State() isOpenNav: boolean = false;
 
   async componentWillLoad() {
     const res = await api.client.query({
@@ -35,6 +36,10 @@ export class SiteNav implements ComponentInterface {
     });
     this.links = res.data.PageItem.content.body[0].content;
     this.hero = res.data.PageItem.content.body[1];
+  }
+
+  toggleNav() {
+    this.isOpenNav = !this.isOpenNav;
   }
 
   render() {
