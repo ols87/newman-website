@@ -1,6 +1,11 @@
 import StoryblokClient from "storyblok-js-client";
 
 class StoryblokService {
+  public client: StoryblokClient;
+  public devMode: boolean;
+  public token: string;
+  public query: any;
+
   constructor() {
     this.devMode = false;
 
@@ -47,6 +52,4 @@ class StoryblokService {
   }
 }
 
-const storyblokInstance = new StoryblokService();
-
-export default storyblokInstance;
+export const storyBlok = new StoryblokService();

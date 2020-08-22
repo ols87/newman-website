@@ -1,4 +1,13 @@
-import { Component, ComponentInterface, Host, h, Prop } from "@stencil/core";
+import {
+  Component,
+  ComponentInterface,
+  Host,
+  h,
+  Prop,
+  State,
+} from "@stencil/core";
+
+import { storyBlok } from "../../../storyblok";
 
 @Component({
   tag: "page-content",
@@ -6,6 +15,8 @@ import { Component, ComponentInterface, Host, h, Prop } from "@stencil/core";
 })
 export class PageContent implements ComponentInterface {
   @Prop() content: any;
+
+  @State() storyBlok: any = storyBlok;
 
   render() {
     return (
@@ -26,7 +37,11 @@ export class PageContent implements ComponentInterface {
                 <div>
                   <span>&ldquo;</span>
                   <h6>
-                    <div innerHTML={item.content}></div>
+                    <div
+                      innerHTML={this.storyBlok.client.richTextResolver.render(
+                        item.content
+                      )}
+                    ></div>
                   </h6>
                   <h5 class="author-quote">{item.author}</h5>
                   <br />
@@ -43,7 +58,11 @@ export class PageContent implements ComponentInterface {
             {this.content?.content?.length > 0 &&
               this.content.content.map((content) => (
                 <section id={content.title}>
-                  <div innerHTML={content.description}></div>
+                  <div
+                    innerHTML={this.storyBlok.client.richTextResolver.render(
+                      content.description
+                    )}
+                  ></div>
                   {content.images.map((image) => (
                     <img src={image.slug} />
                   ))}
