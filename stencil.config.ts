@@ -10,6 +10,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
 });
 
 export const config: Config = {
+  namespace: "newman",
   globalStyle: "src/global/app.css",
   globalScript: "src/global/app.ts",
   taskQueue: "async",
